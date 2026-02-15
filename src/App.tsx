@@ -56,7 +56,7 @@ export default function App() {
           <div className="bg-neutral-900 p-8 rounded-2xl">
             <h3 className="text-2xl font-semibold mb-4">Full Clean – $45</h3>
             <ul className="text-gray-400 space-y-2">
-              <li>Everything in Basic</li>
+              <li>Everything in Basic Clean</li>
               <li>Interior deep clean</li>
               <li>Window polish</li>
               <li>Tyre shine</li>
@@ -67,7 +67,8 @@ export default function App() {
           <div className="bg-neutral-900 p-8 rounded-2xl">
             <h3 className="text-2xl font-semibold mb-4">Premium Clean – $60</h3>
             <ul className="text-gray-400 space-y-2">
-              <li>Everything in Full</li>
+              <li>Everything In Full Clean</li>
+              <li>Exterior Exfoliation</li>
               <li>Full interior shampoo</li>
               <li>Paint protection wax</li>
             </ul>
@@ -147,6 +148,8 @@ export default function App() {
         <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
         <p className="text-gray-400">
           Email: DrivenDetailAutomotive@gmail.com
+          Phone: 64+ 274 281 640
+        
         </p>
       </section>
 
