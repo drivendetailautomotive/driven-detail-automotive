@@ -9,39 +9,57 @@ export default function App() {
     <div className="bg-black text-white font-sans">
 
       {/* NAVBAR */}
-      <nav className="flex justify-between items-center px-10 py-6 border-b border-neutral-800">
-        <h1 className="text-2xl font-bold">Driven Detail Automotive</h1>
+      <nav className="flex justify-between items-center px-10 py-6 border-b border-neutral-800 bg-black/80 backdrop-blur-md sticky top-0 z-50">
+        <h1 className="text-2xl font-bold tracking-wide">
+          Driven Detail Automotive
+        </h1>
+
         <div className="space-x-6 text-gray-300">
-          <a href="#home" className="hover:text-white">Home</a>
-          <a href="#services" className="hover:text-white">Services</a>
-          <a href="#booking" className="hover:text-white">Booking</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
+          <a href="#home" className="hover:text-white transition">Home</a>
+          <a href="#services" className="hover:text-white transition">Services</a>
+          <a href="#booking" className="hover:text-white transition">Booking</a>
+          <a href="#contact" className="hover:text-white transition">Contact</a>
         </div>
       </nav>
 
-      {/* HERO */}
-      <section id="home" className="h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-black to-neutral-900">
-        <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
-          Driven Detail Automotive
-        </h2>
-        <p className="text-gray-400 text-lg max-w-2xl mb-8">
-          Precision. Shine. Driven. Professional automotive cleaning that restores your vehicle inside and out.
-        </p>
-        <a
-          href="#booking"
-          className="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 transition"
-        >
-          Book Now
-        </a>
+      {/* HERO WITH PORSCHE */}
+      <section
+        id="home"
+        className="h-screen flex flex-col justify-center items-center text-center px-6 relative bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1503376780353-7e6692767b70')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/75"></div>
+
+        <div className="relative z-10 max-w-3xl">
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
+            Driven Detail Automotive
+          </h2>
+
+          <p className="text-gray-300 text-lg mb-8">
+            Precision. Shine. Driven. Premium automotive detailing that restores your vehicle inside and out.
+          </p>
+
+          <a
+            href="#booking"
+            className="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-300"
+          >
+            Book Now
+          </a>
+        </div>
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-20 px-8 bg-black">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
+      <section id="services" className="py-24 px-8 bg-black">
+        <h2 className="text-4xl font-bold text-center mb-16">
+          Our Services
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-          <div className="bg-neutral-900 p-8 rounded-2xl">
+          <div className="bg-neutral-900 p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
             <h3 className="text-2xl font-semibold mb-4">Basic Clean – $30</h3>
             <ul className="text-gray-400 space-y-2">
               <li>Exterior hand wash</li>
@@ -51,7 +69,7 @@ export default function App() {
             </ul>
           </div>
 
-          <div className="bg-neutral-900 p-8 rounded-2xl">
+          <div className="bg-neutral-900 p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
             <h3 className="text-2xl font-semibold mb-4">Full Clean – $45</h3>
             <ul className="text-gray-400 space-y-2">
               <li>Everything in Basic Clean</li>
@@ -61,7 +79,7 @@ export default function App() {
             </ul>
           </div>
 
-          <div className="bg-neutral-900 p-8 rounded-2xl">
+          <div className="bg-neutral-900 p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
             <h3 className="text-2xl font-semibold mb-4">Premium Clean – $60</h3>
             <ul className="text-gray-400 space-y-2">
               <li>Everything in Full Clean</li>
@@ -75,7 +93,7 @@ export default function App() {
       </section>
 
       {/* BOOKING */}
-      <section id="booking" className="py-20 bg-neutral-950">
+      <section id="booking" className="py-24 bg-neutral-950">
         <h2 className="text-4xl font-bold text-center mb-12">
           Book Your Appointment
         </h2>
@@ -100,7 +118,7 @@ export default function App() {
 
           <input
             type="text"
-            placeholder="Preferred Date (dd/mm/yyyy)"
+            placeholder="Preferred Date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
             className="w-full p-4 rounded-lg bg-black border border-gray-700"
@@ -141,44 +159,40 @@ export default function App() {
       </section>
 
       {/* CONTACT */}
-<section id="contact" className="py-20 bg-black text-center">
-  <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+      <section id="contact" className="py-24 bg-black text-center">
+        <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
 
-  <div className="space-y-3 text-gray-400">
-    <p>Email: DrivenDetailAutomotive@gmail.com</p>
-    <p>Phone: 027 428 1640</p>
+        <div className="space-y-3 text-gray-400">
+          <p>Email: DrivenDetailAutomotive@gmail.com</p>
+          <p>Phone: 027 428 1640</p>
 
-    <div className="flex justify-center gap-6 pt-6">
+          <div className="flex justify-center gap-8 pt-8">
 
-      {/* Instagram */}
-      <a
-        href="https://instagram.com/drivendetailautomotive"
-        target="_blank"
-        className="hover:scale-110 transition"
-      >
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-          alt="Instagram"
-          className="w-8 h-8"
-        />
-      </a>
+            <a
+              href="https://instagram.com/drivendetailautomotive"
+              target="_blank"
+              className="group"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                className="w-8 h-8 grayscale brightness-200 group-hover:brightness-150 group-hover:scale-110 transition duration-300"
+              />
+            </a>
 
-      {/* TikTok */}
-      <a
-        href="https://tiktok.com/@drivendetailautomotive"
-        target="_blank"
-        className="hover:scale-110 transition"
-      >
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
-          alt="TikTok"
-          className="w-8 h-8"
-        />
-      </a>
+            <a
+              href="https://tiktok.com/@drivendetailautomotive"
+              target="_blank"
+              className="group"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
+                className="w-8 h-8 grayscale brightness-200 group-hover:brightness-150 group-hover:scale-110 transition duration-300"
+              />
+            </a>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
       {/* FOOTER */}
       <footer className="text-center py-6 text-gray-500 border-t border-neutral-800">
