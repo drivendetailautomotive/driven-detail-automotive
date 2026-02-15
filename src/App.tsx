@@ -141,14 +141,32 @@ export default function App() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-20 bg-black text-center">
-        <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+<section id="contact" className="py-20 bg-black text-center">
+  <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
 
-        <div className="space-y-3 text-gray-400">
-          <p>Email: DrivenDetailAutomotive@gmail.com</p>
-          <p>Phone: 027 428 1640</p>
-        </div>
-      </section>
+  <div className="space-y-3 text-gray-400">
+    <p>Email: DrivenDetailAutomotive@gmail.com</p>
+    <p>Phone: 027 428 1640</p>
+
+    <div className="pt-4 space-y-2">
+      <a
+        href="https://instagram.com/drivendetailautomotive"
+        target="_blank"
+        className="block hover:text-white transition"
+      >
+        Instagram: @drivendetailautomotive
+      </a>
+
+      <a
+        href="https://tiktok.com/@drivendetailautomotive"
+        target="_blank"
+        className="block hover:text-white transition"
+      >
+        TikTok: @drivendetailautomotive
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer className="text-center py-6 text-gray-500 border-t border-neutral-800">
