@@ -43,7 +43,7 @@ export default function App() {
 
           {/* BASIC */}
           <div className="bg-neutral-900 p-8 rounded-2xl">
-            <h3 className="text-2xl font-semibold mb-4">Basic Clean – $65</h3>
+            <h3 className="text-2xl font-semibold mb-4">Basic Clean – $30</h3>
             <ul className="text-gray-400 space-y-2">
               <li>Exterior hand wash</li>
               <li>Wheel clean</li>
@@ -54,7 +54,7 @@ export default function App() {
 
           {/* FULL */}
           <div className="bg-neutral-900 p-8 rounded-2xl">
-            <h3 className="text-2xl font-semibold mb-4">Full Clean – $95</h3>
+            <h3 className="text-2xl font-semibold mb-4">Full Clean – $45</h3>
             <ul className="text-gray-400 space-y-2">
               <li>Everything in Basic</li>
               <li>Interior deep clean</li>
@@ -65,11 +65,10 @@ export default function App() {
 
           {/* PREMIUM */}
           <div className="bg-neutral-900 p-8 rounded-2xl">
-            <h3 className="text-2xl font-semibold mb-4">Premium Clean – $135</h3>
+            <h3 className="text-2xl font-semibold mb-4">Premium Clean – $60</h3>
             <ul className="text-gray-400 space-y-2">
               <li>Everything in Full</li>
               <li>Full interior shampoo</li>
-              <li>Leather conditioning</li>
               <li>Paint protection wax</li>
             </ul>
           </div>
