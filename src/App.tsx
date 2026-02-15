@@ -148,22 +148,34 @@ export default function App() {
     <p>Email: DrivenDetailAutomotive@gmail.com</p>
     <p>Phone: 027 428 1640</p>
 
-    <div className="pt-4 space-y-2">
+    <div className="flex justify-center gap-6 pt-6">
+
+      {/* Instagram */}
       <a
         href="https://instagram.com/drivendetailautomotive"
         target="_blank"
-        className="block hover:text-white transition"
+        className="hover:scale-110 transition"
       >
-        Instagram: @drivendetailautomotive
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+          alt="Instagram"
+          className="w-8 h-8"
+        />
       </a>
 
+      {/* TikTok */}
       <a
         href="https://tiktok.com/@drivendetailautomotive"
         target="_blank"
-        className="block hover:text-white transition"
+        className="hover:scale-110 transition"
       >
-        TikTok: @drivendetailautomotive
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
+          alt="TikTok"
+          className="w-8 h-8"
+        />
       </a>
+
     </div>
   </div>
 </section>
