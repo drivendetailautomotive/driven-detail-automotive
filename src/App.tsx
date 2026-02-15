@@ -148,6 +148,7 @@ export default function App() {
         <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
         <p className="text-gray-400">
           Email: DrivenDetailAutomotive@gmail.com
+          
           Phone: 64+ 274 281 640
         
         </p>
