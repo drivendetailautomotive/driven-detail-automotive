@@ -1,183 +1,158 @@
-import { useRef } from "react";
+import { useState } from "react";
 
 export default function App() {
-  const servicesRef = useRef<HTMLDivElement>(null);
-  const bookingRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
-
-  const scrollTo = (ref: any) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [date, setDate] = useState("");
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white font-sans">
 
       {/* NAVBAR */}
-      <nav className="flex justify-between items-center px-10 py-6 border-b border-white/10 backdrop-blur-md bg-black/60 sticky top-0 z-50">
-        <h1 className="text-xl font-bold tracking-widest bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent">
-          Driven Detail Automotive
-        </h1>
-
-        <div className="flex gap-8 text-sm text-gray-300">
-          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Home</button>
-          <button onClick={() => scrollTo(servicesRef)}>Services</button>
-          <button onClick={() => scrollTo(bookingRef)}>Booking</button>
-          <button onClick={() => scrollTo(contactRef)}>Contact</button>
+      <nav className="flex justify-between items-center px-10 py-6 border-b border-neutral-800">
+        <h1 className="text-2xl font-bold">Driven Detail Automotive</h1>
+        <div className="space-x-6 text-gray-300">
+          <a href="#home" className="hover:text-white">Home</a>
+          <a href="#services" className="hover:text-white">Services</a>
+          <a href="#booking" className="hover:text-white">Booking</a>
+          <a href="#contact" className="hover:text-white">Contact</a>
         </div>
       </nav>
 
       {/* HERO */}
-      <section
-        className="h-[90vh] flex items-center justify-center text-center bg-cover bg-center relative"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1503376780353-7e6692767b70')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/70"></div>
-
-        <div className="relative z-10 max-w-3xl px-6">
-          <h2 className="text-6xl font-extrabold mb-6 tracking-wide bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent">
-            Driven Detail Automotive
-          </h2>
-
-          <p className="text-gray-300 mb-10 text-lg">
-            Precision. Shine. Driven. Restoring your vehicle to showroom condition.
-          </p>
-
-          <button
-            onClick={() => scrollTo(bookingRef)}
-            className="px-8 py-4 rounded-xl bg-gradient-to-r from-gray-200 via-white to-gray-200 text-black font-bold hover:scale-105 active:scale-95 transition duration-300 shadow-xl"
-          >
-            Book Now
-          </button>
-        </div>
+      <section id="home" className="h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-black to-neutral-900">
+        <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
+          Driven Detail Automotive
+        </h2>
+        <p className="text-gray-400 text-lg max-w-2xl mb-8">
+          Precision. Shine. Driven. Professional automotive cleaning that restores your vehicle inside and out.
+        </p>
+        <a
+          href="#booking"
+          className="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 transition"
+        >
+          Book Now
+        </a>
       </section>
 
       {/* SERVICES */}
-      <section ref={servicesRef} className="py-28 px-6 max-w-6xl mx-auto text-center">
-        <h3 className="text-4xl font-bold mb-20 bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent">
-          Our Services
-        </h3>
+      <section id="services" className="py-20 px-8 bg-black">
+        <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
 
-        <div className="grid md:grid-cols-3 gap-12">
-          {[
-            {
-              title: "Basic Clean",
-              price: "$30",
-              stripe: "https://buy.stripe.com/test_3cI00l8V57GBh16bJnbV601",
-              details: [
-                "Exterior hand wash",
-                "Wheel rinse",
-                "Tyre clean",
-                "Hand dry finish"
-              ]
-            },
-            {
-              title: "Full Clean",
-              price: "$45",
-              stripe: "https://buy.stripe.com/test_eVq9AV5ITe4Z7qw4gVbV602",
-              details: [
-                "Exterior wash",
-                "Interior vacuum",
-                "Dashboard wipe",
-                "Windows cleaned",
-                "Tyre shine"
-              ]
-            },
-            {
-              title: "Premium Clean",
-              price: "$60",
-              stripe: "https://buy.stripe.com/test_9B66oJ0ozaSN5iocNrbV603",
-              details: [
-                "Full interior deep clean",
-                "Exterior wash & dry",
-                "Tyre shine",
-                "Interior conditioning",
-                "Detailed finish inspection"
-              ]
-            }
-          ].map((service, i) => (
-            <div
-              key={i}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 shadow-2xl hover:shadow-white/10 hover:-translate-y-2 transition duration-500"
-            >
-              <h4 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent">
-                {service.title}
-              </h4>
+        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-              <p className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent">
-                {service.price}
-              </p>
+          {/* BASIC */}
+          <div className="bg-neutral-900 p-8 rounded-2xl">
+            <h3 className="text-2xl font-semibold mb-4">Basic Clean – $65</h3>
+            <ul className="text-gray-400 space-y-2">
+              <li>Exterior hand wash</li>
+              <li>Wheel clean</li>
+              <li>Interior vacuum</li>
+              <li>Dashboard wipe</li>
+            </ul>
+          </div>
 
-              <ul className="text-gray-300 mb-8 space-y-2 text-sm">
-                {service.details.map((item, index) => (
-                  <li key={index}>• {item}</li>
-                ))}
-              </ul>
+          {/* FULL */}
+          <div className="bg-neutral-900 p-8 rounded-2xl">
+            <h3 className="text-2xl font-semibold mb-4">Full Clean – $95</h3>
+            <ul className="text-gray-400 space-y-2">
+              <li>Everything in Basic</li>
+              <li>Interior deep clean</li>
+              <li>Window polish</li>
+              <li>Tyre shine</li>
+            </ul>
+          </div>
 
-              <div className="space-y-3">
-                <button
-                  onClick={() => scrollTo(bookingRef)}
-                  className="w-full py-3 rounded-xl bg-white text-black font-semibold hover:scale-105 transition"
-                >
-                  Book & Pay Cash
-                </button>
+          {/* PREMIUM */}
+          <div className="bg-neutral-900 p-8 rounded-2xl">
+            <h3 className="text-2xl font-semibold mb-4">Premium Clean – $135</h3>
+            <ul className="text-gray-400 space-y-2">
+              <li>Everything in Full</li>
+              <li>Full interior shampoo</li>
+              <li>Leather conditioning</li>
+              <li>Paint protection wax</li>
+            </ul>
+          </div>
 
-                <a
-                  href={service.stripe}
-                  target="_blank"
-                  className="w-full inline-block py-3 rounded-xl bg-gradient-to-r from-gray-200 via-white to-gray-200 text-black font-semibold hover:scale-105 transition text-center"
-                >
-                  Pay Online
-                </a>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
-      {/* BOOKING FORM */}
-      <section ref={bookingRef} className="py-28 px-6 text-center border-t border-white/10">
-        <h3 className="text-4xl font-bold mb-12 bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent">
+      {/* BOOKING */}
+      <section id="booking" className="py-20 bg-neutral-950">
+        <h2 className="text-4xl font-bold text-center mb-12">
           Book Your Appointment
-        </h3>
+        </h2>
 
-        <div className="max-w-xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 space-y-6">
+        <div className="max-w-xl mx-auto bg-neutral-900 p-8 rounded-2xl space-y-6">
+
           <input
             type="text"
             placeholder="Full Name"
-            className="w-full p-4 rounded-xl bg-black border border-white/10"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full p-4 rounded-lg bg-black border border-gray-700"
           />
+
           <input
             type="tel"
             placeholder="Phone Number"
-            className="w-full p-4 rounded-xl bg-black border border-white/10"
-          />
-          <input
-            type="date"
-            className="w-full p-4 rounded-xl bg-black border border-white/10"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="w-full p-4 rounded-lg bg-black border border-gray-700"
           />
 
-          <p className="text-gray-400 text-sm">
-            Payment available via cash or online via Stripe.
+          <input
+            type="text"
+            placeholder="Preferred Date (dd/mm/yyyy)"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            className="w-full p-4 rounded-lg bg-black border border-gray-700"
+          />
+
+          <p className="text-gray-400 text-center text-sm">
+            Pay securely online or in cash on arrival.
           </p>
+
+          <div className="space-y-4 pt-6">
+
+            <a
+              href="https://buy.stripe.com/test_3cI00l8V57GBh16bJnbV601"
+              target="_blank"
+              className="block text-center bg-white text-black py-3 rounded-lg font-semibold hover:bg-gray-200 transition"
+            >
+              Book Basic Clean
+            </a>
+
+            <a
+              href="https://buy.stripe.com/test_eVq9AV5ITe4Z7qw4gVbV602"
+              target="_blank"
+              className="block text-center bg-white text-black py-3 rounded-lg font-semibold hover:bg-gray-200 transition"
+            >
+              Book Full Clean
+            </a>
+
+            <a
+              href="https://buy.stripe.com/test_9B66oJ0ozaSN5iocNrbV603"
+              target="_blank"
+              className="block text-center bg-white text-black py-3 rounded-lg font-semibold hover:bg-gray-200 transition"
+            >
+              Book Premium Clean
+            </a>
+
+          </div>
         </div>
       </section>
 
       {/* CONTACT */}
-      <section ref={contactRef} className="py-24 text-center border-t border-white/10">
-        <h3 className="text-3xl font-bold mb-8 bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent">
-          Contact Us
-        </h3>
-
-        <p className="text-gray-300 mb-2">Flat Bush, Auckland</p>
-        <p className="text-gray-300 mb-2">027 428 1640</p>
-        <p className="text-gray-300">DrivenDetailAutomotive@gmail.com</p>
+      <section id="contact" className="py-20 bg-black text-center">
+        <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+        <p className="text-gray-400">
+          Email: DrivenDetailAutomotive@gmail.com
+        </p>
       </section>
 
       {/* FOOTER */}
-      <footer className="text-center py-6 text-gray-500 border-t border-white/10">
+      <footer className="text-center py-6 text-gray-500 border-t border-neutral-800">
         © {new Date().getFullYear()} Driven Detail Automotive
       </footer>
 
