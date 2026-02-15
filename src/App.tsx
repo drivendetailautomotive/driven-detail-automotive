@@ -144,12 +144,14 @@ export default function App() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-20 bg-black text-center">
-        <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
-        <p className="text-gray-400">
-          Email: DrivenDetailAutomotive@gmail.com
-          
-          Phone: 64+ 274 281 640
+<section id="contact" className="py-20 bg-black text-center">
+  <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+
+  <div className="space-y-3 text-gray-400">
+    <p>Email: DrivenDetailAutomotive@gmail.com</p>
+    <p>Phone: 027 428 1640</p>
+  </div>
+</section>
         
         </p>
       </section>
