@@ -41,7 +41,6 @@ export default function App() {
 
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-          {/* BASIC */}
           <div className="bg-neutral-900 p-8 rounded-2xl">
             <h3 className="text-2xl font-semibold mb-4">Basic Clean – $30</h3>
             <ul className="text-gray-400 space-y-2">
@@ -52,7 +51,6 @@ export default function App() {
             </ul>
           </div>
 
-          {/* FULL */}
           <div className="bg-neutral-900 p-8 rounded-2xl">
             <h3 className="text-2xl font-semibold mb-4">Full Clean – $45</h3>
             <ul className="text-gray-400 space-y-2">
@@ -63,12 +61,11 @@ export default function App() {
             </ul>
           </div>
 
-          {/* PREMIUM */}
           <div className="bg-neutral-900 p-8 rounded-2xl">
             <h3 className="text-2xl font-semibold mb-4">Premium Clean – $60</h3>
             <ul className="text-gray-400 space-y-2">
-              <li>Everything In Full Clean</li>
-              <li>Exterior Exfoliation</li>
+              <li>Everything in Full Clean</li>
+              <li>Exterior exfoliation</li>
               <li>Full interior shampoo</li>
               <li>Paint protection wax</li>
             </ul>
@@ -144,16 +141,13 @@ export default function App() {
       </section>
 
       {/* CONTACT */}
-<section id="contact" className="py-20 bg-black text-center">
-  <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+      <section id="contact" className="py-20 bg-black text-center">
+        <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
 
-  <div className="space-y-3 text-gray-400">
-    <p>Email: DrivenDetailAutomotive@gmail.com</p>
-    <p>Phone: 027 428 1640</p>
-  </div>
-</section>
-        
-        </p>
+        <div className="space-y-3 text-gray-400">
+          <p>Email: DrivenDetailAutomotive@gmail.com</p>
+          <p>Phone: 027 428 1640</p>
+        </div>
       </section>
 
       {/* FOOTER */}
