@@ -70,7 +70,7 @@ export default function App() {
           </div>
 
           <div className="bg-neutral-900 p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-4">Full Clean – $45</h3>
+            <h3 className="text-2xl font-semibold mb-4">Full Clean – $50</h3>
             <ul className="text-gray-400 space-y-2">
               <li>Everything in Basic Clean</li>
               <li>Interior deep clean</li>
@@ -80,7 +80,7 @@ export default function App() {
           </div>
 
           <div className="bg-neutral-900 p-8 rounded-2xl hover:-translate-y-2 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-4">Premium Clean – $60</h3>
+            <h3 className="text-2xl font-semibold mb-4">Premium Clean – $70</h3>
             <ul className="text-gray-400 space-y-2">
               <li>Everything in Full Clean</li>
               <li>Exterior exfoliation</li>
